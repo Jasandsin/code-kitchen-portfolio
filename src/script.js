@@ -1,0 +1,24 @@
+
+// Container aus HTML geholt wo die Projekte eingefügt werden müssen: <div id="project-list"></div>
+const projectList = document.getElementById("project-list");
+
+// Porjekte dynamisch als cards erstellt
+projects.forEach(project => {
+
+    const card = document.createElement("div");
+    card.classList.add("project");
+
+    const title = document.createElement("h3");
+    title.innerText = project.title;
+
+    const description = document.createElement("p");
+    description.innerText = project.description;
+
+    // Title und description in card eingefügt
+    card.appendChild(title);
+    card.appendChild(description);
+
+    // Card in html-container <div id="project-list"></div> eingefügt
+    projectList.appendChild(card);
+
+});

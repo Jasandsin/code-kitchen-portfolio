@@ -5,9 +5,10 @@ body{
 }
 
 header{
-    padding: 60px;
-    text-align: center;
-    background-color: black;
-    color: bisque;
+    padding: 80px 60px;
+    text-align: left;
+    background-image: url("../assets/images/Header-Background.jpg");
+    background-size: cover;
+    color: black;
     font-size: 30px;
 }
