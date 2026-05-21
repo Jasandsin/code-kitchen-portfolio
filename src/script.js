@@ -22,3 +22,25 @@ projects.forEach(project => {
     projectList.appendChild(card);
 
 });
+
+
+
+//Skills
+
+const skillsList = document.getElementById("skills-list");
+
+skills.forEach(skill => {
+    const card = document.createElement("div");
+    card.classList.add("skill");
+
+    const name = document.createElement("h3");
+    name.innerText = skill.name;
+
+    const description = document.createElement("p");
+    description.innerText = skill.description;
+
+    card.appendChild(name);
+    card.appendChild(description);
+
+    skillsList.appendChild(card);
+})

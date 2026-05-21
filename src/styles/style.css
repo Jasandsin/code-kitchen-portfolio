@@ -10,11 +10,10 @@ body{
 }
 
 header{
-    padding: 120px 60px;
+    padding: 120px 80px;
     text-align: left;
-    background-image: url("../assets/images/Header-Background.jpg");
-    background-size: cover;
-    color: black;
+    color: var(--text);
+    background-color: var(--background);
     font-size: 30px;
 }
 
@@ -24,6 +23,10 @@ header h1{
 }
 
 .header-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,13 +43,16 @@ header h1{
 }
 
 .header-picture img{
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     border: 5px solid var(--primary);
     display: flex;
     justify-content: flex-end;
 }
+
+
+
 
 section{
     padding: 60px 20px;
@@ -54,7 +60,39 @@ section{
     margin: auto;
 }
 
-.about{
+#about{
     padding: 80px 60px;
     text-align: center;
+}
+
+
+.project {
+    background:var(--primary);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.skill{
+    background:var(--primary);
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+
+/* Beim kleineren Bildschrim Bild unten Text oben*/
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text {
+        max-width: 100%;
+    }
+
+    .header-picture {
+        margin-top: 20px;
+    }
 }
