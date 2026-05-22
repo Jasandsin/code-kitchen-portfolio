@@ -3,10 +3,10 @@ body{
     color: var(--text);
     font-family: Arial, serif;
     --primary: #0A2540;
-    --secondary: #1E90FF;
+    --secondary: #1E293B;
     --background: #0F172A;
     --text: #E2E8F0;
-    margin: 0;
+    margin: 0 0;
 }
 
 header{
@@ -56,7 +56,7 @@ header h1{
 
 section{
     padding: 60px 20px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -65,25 +65,67 @@ section{
     text-align: center;
 }
 
+/* Project */
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .project {
     background:var(--primary);
-    padding: 20px;
+    padding: 50px;
     margin-top: 20px;
     border-radius: 15px;
 }
 
-.skill{
-    background:var(--primary);
-    padding: 5px;
-    margin-top: 5px;
-    border-radius: 15px;
-}
+
+/* Skill */
 
 #skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.skill{
+    position: relative;
+    background:var(--primary);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -100px;
+
+    background: var(--secondary);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.skill:hover .tooltip {
+    opacity: 1;
+}
+.tooltip::after{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--secondary) transparent transparent transparent
 }
 
 

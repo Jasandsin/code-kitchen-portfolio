@@ -39,8 +39,13 @@ skills.forEach(skill => {
     const description = document.createElement("p");
     description.innerText = skill.description;
 
+    // Tooltip erstellen
+    const tooltip = document.createElement("div");
+    tooltip.classList.add("tooltip");
+    tooltip.innerText = skill.description;
+
     card.appendChild(name);
-  //  card.appendChild(description);
+    card.appendChild(tooltip);
 
     skillsList.appendChild(card);
 })
