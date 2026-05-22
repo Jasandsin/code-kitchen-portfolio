@@ -1,7 +1,7 @@
 // Array-List erstellt mit Projekten
 const projects = [
     {
-        title: "IP6 The Architect’s 1:1 Sandbox",
+        title: "The Architect’s 1:1 Sandbox",
         description: "Live Grundrissplanung im Massstab 1:1 gemeinsam, intuitiv und in Echtzeit. " +
             "Mit IR Stift auf der Projektionsfläche des SCDH werden Ideen sofort sichtbar.",
         image: "../src/assets/images/IP6-picture.png",

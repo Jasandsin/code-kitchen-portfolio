@@ -18,7 +18,7 @@ projects.forEach(project => {
     image.src = project.image;
 
     const button = document.createElement("a");
-    button.innerText = "View Project";
+    button.innerText = "More";
     button.href = project.link;
     button.classList.add("project-btn");
 
