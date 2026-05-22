@@ -14,8 +14,18 @@ projects.forEach(project => {
     const description = document.createElement("p");
     description.innerText = project.description;
 
+    const image = document.createElement("img");
+    image.src = project.image;
+
+    const button = document.createElement("a");
+    button.innerText = "View Project";
+    button.href = project.link;
+    button.classList.add("project-btn");
+
     // Title und description in card eingefügt
     card.appendChild(title);
+    card.appendChild(image);
+    card.appendChild(button);
    // card.appendChild(description);
 
     // Card in html-container <div id="project-list"></div> eingefügt
