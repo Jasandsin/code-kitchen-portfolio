@@ -16,7 +16,7 @@ projects.forEach(project => {
 
     // Title und description in card eingefügt
     card.appendChild(title);
-    card.appendChild(description);
+   // card.appendChild(description);
 
     // Card in html-container <div id="project-list"></div> eingefügt
     projectList.appendChild(card);
@@ -33,14 +33,14 @@ skills.forEach(skill => {
     const card = document.createElement("div");
     card.classList.add("skill");
 
-    const name = document.createElement("h3");
+    const name = document.createElement("span");
     name.innerText = skill.name;
 
     const description = document.createElement("p");
     description.innerText = skill.description;
 
     card.appendChild(name);
-    card.appendChild(description);
+  //  card.appendChild(description);
 
     skillsList.appendChild(card);
 })
