@@ -52,12 +52,13 @@ header h1{
 }
 
 
-
-
 section{
     padding: 60px 20px;
     max-width: 1200px;
     margin: auto;
+}
+section h2{
+    font-size: 36px;
 }
 
 #about{
@@ -141,6 +142,25 @@ section{
     border-color: var(--secondary) transparent transparent transparent
 }
 
+/* EXPERIENCE */
+
+
+.experience-job h3 {
+    font-size: 22px;
+    margin-bottom: 1px;
+}
+.experience-job p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.company {
+    color: #94A3B8;
+}
+
+.experience-job li {
+    margin-bottom: 5px;
+}
 
 /* Beim kleineren Bildschrim Bild unten Text oben*/
 @media (max-width: 900px) {
