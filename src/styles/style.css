@@ -10,7 +10,30 @@ body{
     --secondary: #1E293B;
     --background: #0F172A;
     --text: #E2E8F0;
+    --accent: #94A3B8;
     margin: 0 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    padding: 20px 40px;
+}
+
+.nav-left h3 {
+    margin: 0;
+}
+.nav-center a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+}
+.nav-center a:hover {
+    color:  var(--accent);
 }
 
 
