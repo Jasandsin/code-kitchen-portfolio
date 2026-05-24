@@ -20,10 +20,23 @@ body{
     margin: 0 0;
 }
 
+/* DARKMODE */
+
 .dark-mode{
     color: #0A2540;
-    background: var(--text);
-    --primary: #E2E8F0;
+    background: #E2E8F0;
+    --primary: #f1f5f9;
+    --secondary: #0A2540;
+    --background: #0A2540;
+    --accent: #3d426a;
+}
+
+.dark-mode .nav-center a{
+    color: #0A2540;
+}
+
+.dark-mode .nav-center a:hover{
+    --accent: #94A3B8;
 }
 
 /* NAVBAR */
@@ -43,6 +56,7 @@ body{
     margin-left: 20px;
     text-decoration: none;
     color: var(--text);
+    font-weight: bold;
 }
 
 .nav-center a:hover {
@@ -204,7 +218,7 @@ section h2{
 }
 
 .company {
-    color: #94A3B8;
+    color: var(--accent);
 }
 
 .experience-job li {
@@ -223,7 +237,7 @@ section h2{
 }
 
 .school {
-    color: #94A3B8;
+    color: var(--accent)
 }
 
 .education-item li {
