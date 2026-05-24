@@ -1,4 +1,10 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
+    height: max-content; /* Used to enable scrolling */
     background: linear-gradient(to bottom,
     var(--background) 0%,
     #111827 40%,
@@ -14,13 +20,19 @@ body{
     margin: 0 0;
 }
 
+.dark-mode{
+    color: #0A2540;
+    background: var(--text);
+    --primary: #E2E8F0;
+}
+
 /* NAVBAR */
 
 .navbar {
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background);
     padding: 20px 40px;
 }
 
@@ -32,6 +44,7 @@ body{
     text-decoration: none;
     color: var(--text);
 }
+
 .nav-center a:hover {
     color:  var(--accent);
 }
@@ -39,19 +52,19 @@ body{
 
 /* HEADER */
 
-header{
+title{
     padding: 120px 80px;
     text-align: left;
     color: var(--text);
     font-size: 30px;
 }
 
-header h1{
+title h1{
     font-size: 60px;
     margin-bottom: 10px;
 }
 
-.header-content{
+.title-content{
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -59,16 +72,16 @@ header h1{
     align-items: center;
 }
 
-.header-text {
+.title-text {
     max-width: 50%;
 }
 
-.header-picture{
+.title-picture{
     display: flex;
     justify-content: flex-end;
 }
 
-.header-picture img{
+.title-picture img{
     width: 260px;
     height: 260px;
     border-radius: 50%;

@@ -59,3 +59,9 @@ skills.forEach(skill => {
 
     skillsList.appendChild(card);
 })
+
+//
+function DarkAndLightMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
