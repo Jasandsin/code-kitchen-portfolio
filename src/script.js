@@ -43,6 +43,16 @@ skills.forEach(skill => {
     const card = document.createElement("div");
     card.classList.add("skill");
 
+    const count = skill.description.split(",").length;
+
+    if (count >= 6) {
+        card.classList.add("large");
+    } else if (count >= 3) {
+        card.classList.add("medium");
+    } else {
+        card.classList.add("small");
+    }
+
     const name = document.createElement("span");
     name.innerText = skill.name;
 

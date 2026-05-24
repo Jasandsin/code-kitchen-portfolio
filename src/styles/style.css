@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    height: max-content; /* Used to enable scrolling */
+    height: max-content;
     background: linear-gradient(to bottom,
     var(--background) 0%,
     #111827 40%,
@@ -52,7 +52,7 @@ body{
 .nav-right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .nav-left h3 {
@@ -95,8 +95,6 @@ body{
     background-color: var(--accent);
     transition: 0.3s;
     border-radius: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .slider:before {
@@ -222,16 +220,44 @@ section h2{
 #skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
-.skill{
-    position: relative;
-    background:var(--primary);
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 15px;
+.skill {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 6px;
+    border-radius: 20px;
+    color: var(--text);
+    font-size: 14px;
     cursor: pointer;
+}
+
+.skill.large{
+    background: #3b5166;
+}
+
+.skill.medium{
+    background: #546679;
+}
+
+.skill.small{
+    background: #6c7c8c;
+}
+
+.dark-mode .skill.large{
+    background: #0a2540;
+}
+
+.dark-mode .skill.medium{
+    background: #233b53;
+}
+
+.dark-mode .skill.small{
+    background: #3b5166;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
 }
 
 .tooltip {
