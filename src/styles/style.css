@@ -122,7 +122,7 @@ nav.nav-right a{
 }
 
 
-/* HEADER */
+/* -------------------- HEADER ----------------------- */
 
 title{
     padding: 120px 80px;
@@ -199,25 +199,6 @@ section h2{
     text-align: center;
 }
 
-.project-btn {
-    display: block;
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-    background: var(--white);
-    color: var(--primary);
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.project-btn:hover {
-    background: var(--accent);
-    color: var(--white);
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* MODAL POPUP */
 
 .modal {
@@ -238,7 +219,31 @@ section h2{
     padding: 20px;
     width: 400px;
     border-radius: 10px;
-    color: var(--text);
+    color: var(--white);
+}
+
+#modal-image{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.modal-btn {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    background: var(--white);
+    color: var(--primary);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.modal-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .close {
@@ -256,12 +261,24 @@ section h2{
 
 .skill {
     display: inline-block;
+    text-align: center;
+    width: 150px;
+    height: 20px;
     padding: 8px 16px;
     margin: 6px;
     border-radius: 20px;
     color: var(--white);
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
+    transition: width 2s, height 4s, transform 2s, padding-top 2s;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    text-align: center;
+    padding: 8px 16px;
+    width: 300px;
+    height: 20px;
 }
 
 .skill.large{
@@ -286,10 +303,6 @@ section h2{
 
 .dark-mode .skill.small{
     background: #3b5166;
-}
-
-.skill:hover {
-    transform: translateY(-4px);
 }
 
 .tooltip {
