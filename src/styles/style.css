@@ -55,13 +55,6 @@ body{
     gap: 10px;
 }
 
-nav.nav-right a{
-
-}
-.nav-left h3 {
-    margin: 0;
-}
-
 .nav-center a {
     margin-left: 20px;
     text-decoration: none;
@@ -163,7 +156,7 @@ title h1{
     justify-content: flex-end;
 }
 
-/* SECTION */
+/*------------------- SECTION -----------------------------*/
 
 section{
     padding: 40px 20px;
@@ -298,6 +291,11 @@ section h3{
     font-size: 16px;
 }
 
+.skill:hover .tooltip {
+    opacity: 1;
+}
+
+
 .skill.large{
     background: #3b5166;
 }
@@ -322,6 +320,46 @@ section h3{
     background: #3b5166;
 }
 
+
+#competences-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.competence {
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 150px;
+    height: 12px;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 10px;
+    cursor: pointer;
+    transition: width 2s, height 4s, transform 2s, font-size 2s, padding 2s;
+}
+
+
+.competence:hover {
+    transform: translateY(-6px);
+    text-align: center;
+    width: 250px;
+    height: 22px;
+    padding: 22px;
+    font-size: 16px;
+}
+
+.competence:hover .tooltip {
+    opacity: 1;
+}
+
+
+/* TOOLTIP */
+
 .tooltip {
     position: absolute;
     bottom: 120%;
@@ -336,10 +374,6 @@ section h3{
 
     opacity: 0;
     transition: 0.3s;
-}
-
-.skill:hover .tooltip {
-    opacity: 1;
 }
 
 .tooltip::after{

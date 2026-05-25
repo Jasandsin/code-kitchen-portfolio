@@ -84,6 +84,31 @@ skills.forEach(skill => {
     skillsList.appendChild(card);
 })
 
+//COMPETENCES
+
+const competenceList = document.getElementById("competences-list");
+
+competences.forEach(competence => {
+    const card = document.createElement("div");
+    card.classList.add("competence");
+
+    const name = document.createElement("span");
+    name.innerText = competence.name;
+
+    const description = document.createElement("p");
+    description.innerText = competence.description;
+
+    // Tooltip erstellen
+    const tooltip = document.createElement("div");
+    tooltip.classList.add("tooltip");
+    tooltip.innerText = competence.description;
+
+    card.appendChild(name);
+    card.appendChild(tooltip);
+
+    competenceList.appendChild(card);
+})
+
     //DARKANDLIGHT MODE
 
     function DarkAndLightMode() {
