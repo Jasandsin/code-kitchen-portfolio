@@ -2,6 +2,9 @@
 // Container aus HTML geholt wo die Projekte eingefügt werden müssen: <div id="project-list"></div>
 const projectList = document.getElementById("project-list");
 
+const modal = document.getElementById("myModal");
+const closeBtn = document.querySelector(".close");
+
 // Porjekte dynamisch als cards erstellt
 projects.forEach(project => {
 
@@ -17,22 +20,33 @@ projects.forEach(project => {
     const image = document.createElement("img");
     image.src = project.image;
 
-    const button = document.createElement("a");
-    button.innerText = "More";
-    button.href = project.link;
-    button.classList.add("project-btn");
-
     // Title und description in card eingefügt
     card.appendChild(title);
     card.appendChild(image);
-    card.appendChild(button);
-   // card.appendChild(description);
+
+    // Modal click
+    card.onclick = function() {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("modal-title").innerText = project.title;
+        document.getElementById("modal-description").innerText = project.description;
+        document.getElementById("modal-image").src = project.image;
+        document.getElementById("modal-link").href = project.link;
+    }
 
     // Card in html-container <div id="project-list"></div> eingefügt
     projectList.appendChild(card);
 
 });
 
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 //Skills
@@ -70,8 +84,9 @@ skills.forEach(skill => {
     skillsList.appendChild(card);
 })
 
-//
-function DarkAndLightMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
+    //DARKANDLIGHT MODE
+
+    function DarkAndLightMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
