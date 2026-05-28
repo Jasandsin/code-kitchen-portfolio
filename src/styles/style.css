@@ -326,36 +326,53 @@ section h3{
     flex-wrap: wrap;
 }
 
+/* COMPETENCE */
 
 .competence {
-    background-color: var(--primary);
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    width: 150px;
-    height: 12px;
-    padding: 12px;
-    margin: 6px;
-    border-radius: 20px;
+    background: var(--primary);
     color: var(--white);
-    font-size: 10px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.3s ease;
     cursor: pointer;
-    transition: width 2s, height 4s, transform 2s, font-size 2s, padding 2s;
 }
-
 
 .competence:hover {
-    transform: translateY(-6px);
-    text-align: center;
-    width: 250px;
-    height: 22px;
-    padding: 22px;
-    font-size: 16px;
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-.competence:hover .tooltip {
-    opacity: 1;
+/* LANGUAGES */
+
+.language {
+    margin-bottom: 15px;
 }
+
+.language p {
+    margin-bottom: 5px;
+}
+
+.bar {
+    width: 100%;
+    background: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    text-align: right;
+    padding-right: 8px;
+    color: var(--white);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.deutsch {width: 100%; background-color: var(--accent);} /* Green */
+.englisch {width: 85%; background-color:  var(--accent);} /* Blue */
+.punjabi {width: 90%; background-color:   var(--accent);} /* Red */
 
 
 /* TOOLTIP */

@@ -98,13 +98,8 @@ competences.forEach(competence => {
     const description = document.createElement("p");
     description.innerText = competence.description;
 
-    // Tooltip erstellen
-    const tooltip = document.createElement("div");
-    tooltip.classList.add("tooltip");
-    tooltip.innerText = competence.description;
-
     card.appendChild(name);
-    card.appendChild(tooltip);
+    card.appendChild(description);
 
     competenceList.appendChild(card);
 })
